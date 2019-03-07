@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "lib": ["dom"],
     "module": "es6",
     "noImplicitAny": true,
     "outDir": "./public/",
     "removeComments": true,
     "rootDir": "./",
     "sourceMap": true,
-    "strict": true,
     "target": "es5",
     "typeRoots": ["./node_modules/@types", "./src/definitions"]
   }
