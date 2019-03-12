@@ -1,0 +1,5 @@
+imageio
+IPython
+matplotlib
+numpy
+tensorflow-gpu==2.0.0-alpha0

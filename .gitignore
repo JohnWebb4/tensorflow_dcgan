@@ -63,3 +63,7 @@ typings/
 # Exports
 public/*
 !public/index.html
+
+# Training data
+training
+!training/dcgan.py

@@ -6,35 +6,35 @@ declare module "@tensorflow/tfjs" {
   export function sequential(): Model;
   export function tensor2d(...args: number[][]): Tensor;
 
-  type Layer = any;
-  type Tensor = any;
+  export type Layer = any;
+  export type Tensor = any;
 
-  interface Layers {
+  export interface Layers {
     dense(layerProps: LayerProps): Layer;
   }
 
-  interface LayerProps {
+  export interface LayerProps {
     inputShape: number[];
     units: number;
   }
 
-  interface Model {
+  export interface Model {
     add(layer: Layer): void;
     compile(compileProps: CompileProps): void;
     fit(input: Tensor, output: Tensor, props: FitProps): Promise<void>;
     predict(input: Tensor): Result;
   }
 
-  interface CompileProps {
+  export interface CompileProps {
     loss: "meanSquaredError";
     optimizer: "sgd";
   }
 
-  interface FitProps {
+  export interface FitProps {
     epochs: number;
   }
 
-  interface Result {
+  export interface Result {
     print(): void;
   }
 }

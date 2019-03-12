@@ -66,17 +66,18 @@ function generateFailInput(
   const failInput: number[][] = [];
 
   function generateRandomSentence(): string {
-    const sentenceLength =
+    const sentenceLength = Math.floor(
       Math.random() * (maxSentenceLength - minSentenceLength) +
-      minSentenceLength;
+        minSentenceLength,
+    );
 
-    let sentence = "";
+    const wordArray = [];
 
     for (let i = 0; i < sentenceLength; i += 1) {
-      sentence += words[Math.floor(Math.random() * words.length)];
+      wordArray.push(words[Math.floor(Math.random() * words.length)]);
     }
 
-    return sentence;
+    return wordArray.join(" ");
   }
 
   for (let i = 0; i < length; i += 1) {
